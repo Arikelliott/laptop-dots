@@ -1,0 +1,227 @@
+[file:///home/arik/.config/dunst/dunstrc]
+Bookmarks=
+Checksum=a05eee95b22b06ef5f077b34ceb616596f4be555
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2022,2,27,17,21,41.296
+URL=file:///home/arik/.config/dunst/dunstrc
+
+[file:///home/arik/.config/gtk-3.0/gtk.css]
+Bookmarks=
+Checksum=23668bdd7e9d2a832251de32cadf71fd5542611d
+Encoding=UTF-8
+Highlighting=CSS
+Highlighting Set By User=false
+Indentation Mode=cstyle
+Mode=CSS
+Mode Set By User=false
+Time=2022,2,27,17,58,8.369
+URL=file:///home/arik/.config/gtk-3.0/gtk.css
+
+[file:///home/arik/.config/i3/config-backup]
+Bookmarks=
+Checksum=9180eef03f97127db450bd49c844898fb3ec21aa
+Encoding=UTF-8
+Highlighting=Python
+Highlighting Set By User=false
+Indentation Mode=python
+Mode=Python
+Mode Set By User=true
+Time=2022,2,25,5,26,49.697
+URL=file:///home/arik/.config/i3/config-backup
+
+[file:///home/arik/.config/picom/picom.conf]
+Bookmarks=
+Checksum=c688bed1a8d64bf814d1c6c2433b15ccbd0f3399
+Encoding=UTF-8
+Highlighting=Python
+Highlighting Set By User=false
+Indentation Mode=python
+Mode=Normal
+Mode Set By User=true
+Time=2022,2,28,21,2,0.921
+URL=file:///home/arik/.config/picom/picom.conf
+
+[file:///home/arik/.config/polybar/config]
+Bookmarks=
+Checksum=62ec3fa26c5cfa495ae9ed4bbb91d0e7c870bb65
+Encoding=UTF-8
+Highlighting=INI Files
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=true
+Time=2022,2,28,21,1,59.304
+URL=file:///home/arik/.config/polybar/config
+
+[file:///home/arik/.config/polybar/config.ini]
+Bookmarks=
+Checksum=0c991af43b8bf2cf7d214e6d9bb6b40815b9cef5
+Encoding=UTF-8
+Highlighting=INI Files
+Highlighting Set By User=false
+Indentation Mode=cstyle
+Mode=INI Files
+Mode Set By User=true
+Time=2022,2,28,5,57,20.621
+URL=file:///home/arik/.config/polybar/config.ini
+
+[file:///home/arik/.config/polybar/launch.sh]
+Bookmarks=
+Checksum=03d350169d7b7080f45ce6130c32695b2b7ca835
+Encoding=UTF-8
+Highlighting=Bash
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Bash
+Mode Set By User=false
+Time=2022,2,25,4,44,4.175
+URL=file:///home/arik/.config/polybar/launch.sh
+
+[file:///home/arik/.config/xfce4/terminal/accels.scm]
+Bookmarks=
+Checksum=673bbea028b2d893faa989d24a388087537bc810
+Encoding=UTF-8
+Highlighting=Scheme
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Scheme
+Mode Set By User=false
+Time=2022,3,3,1,40,44.723
+URL=file:///home/arik/.config/xfce4/terminal/accels.scm
+
+[file:///home/arik/.config/xfce4/terminal/terminalrc]
+Bookmarks=
+Checksum=d5b041873adfe417ce49296e00da58310479fd82
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2022,3,3,1,40,50.413
+URL=file:///home/arik/.config/xfce4/terminal/terminalrc
+
+[file:///home/arik/.local/share/Steam/steamapps/common/Dead Cells/deadcells]
+Bookmarks=
+Checksum=071ff27d2380a0131c8119e38b8a27deee14bce9
+Encoding=ISO-8859-15
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2022,2,25,2,42,36.939
+URL=file:///home/arik/.local/share/Steam/steamapps/common/Dead Cells/deadcells
+
+[file:///home/arik/dotfiles/i3/.config/i3/config]
+Bookmarks=
+Checksum=ff98617926c5ec22f9cf1ee361bf1f55c746b22d
+Encoding=UTF-8
+Highlighting=Python
+Highlighting Set By User=false
+Indentation Mode=python
+Mode=Python
+Mode Set By User=true
+Time=2022,3,3,17,26,32.373
+URL=file:///home/arik/dotfiles/i3/.config/i3/config
+
+[file:///home/arik/dotfiles/lightdm/lightdm-gtk-greeter.conf]
+Bookmarks=
+Checksum=011e3ed3bb82343147a8389a07a8838f256237a8
+Encoding=UTF-8
+Highlighting=INI Files
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=INI Files
+Mode Set By User=true
+Time=2022,3,3,21,18,9.91
+URL=file:///home/arik/dotfiles/lightdm/lightdm-gtk-greeter.conf
+
+[file:///home/arik/dotfiles/lightdm/lightdm-setter.sh]
+Bookmarks=
+Checksum=45564bb16eccb8382284046b247417194ea10759
+Encoding=UTF-8
+Highlighting=Bash
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Bash
+Mode Set By User=false
+Time=2022,3,3,21,15,20.079
+URL=file:///home/arik/dotfiles/lightdm/lightdm-setter.sh
+
+[file:///home/arik/dotfiles/picom/.config/picom/picom.conf]
+Bookmarks=
+Checksum=a19253102ca4ae9839f66dbb3db2b6e8dfbda627
+Encoding=UTF-8
+Highlighting=INI Files
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=INI Files
+Mode Set By User=true
+Time=2022,3,2,23,15,51.219
+URL=file:///home/arik/dotfiles/picom/.config/picom/picom.conf
+
+[file:///home/arik/grandma-house-passwd.txt]
+Bookmarks=
+Checksum=db94b548c9d25e20453e333188aea97779afd779
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2022,2,25,5,16,47.943
+URL=file:///home/arik/grandma-house-passwd.txt
+
+[file:///home/arik/repos/arikelliott.com/website-files/blog/wp-includes/js/tinymce/license.txt]
+Bookmarks=
+Checksum=b17fc90494cf7573951fdbcccc9d2df35ad95797
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2022,2,1,15,34,30.386
+URL=file:///home/arik/repos/arikelliott.com/website-files/blog/wp-includes/js/tinymce/license.txt
+
+[file:///home/arik/repos/i3-gaps-dotfiles/i3/config]
+Bookmarks=
+Checksum=4fe273f863d4bbac5352d37f629758e40eef346a
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2022,3,1,3,43,34.473
+URL=file:///home/arik/repos/i3-gaps-dotfiles/i3/config
+
+[file:///home/arik/repos/i3-gaps-dotfiles/picom/picom.conf]
+Bookmarks=
+Checksum=0e84771ea8bed96e2e47d3ae4c59ca72fc6a847d
+Encoding=UTF-8
+Highlighting=INI Files
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=true
+Time=2022,3,2,22,13,48.639
+URL=file:///home/arik/repos/i3-gaps-dotfiles/picom/picom.conf
+
+[file:///home/arik/repos/i3-gaps-dotfiles/picom/picom.conf-backup]
+Bookmarks=
+Checksum=f6901c1d4f822055b1b99c910fbd6509069445f6
+Encoding=UTF-8
+Highlighting=INI Files
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=true
+Time=2022,3,1,3,45,6.974
+URL=file:///home/arik/repos/i3-gaps-dotfiles/picom/picom.conf-backup

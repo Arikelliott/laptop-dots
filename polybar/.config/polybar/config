@@ -1,0 +1,713 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+
+[colors]
+background = ${xrdb:color0:#222}
+background-alt = ${xrdb:color08:#222}
+red = ${xrdb:color1:#222}
+red-alt = ${xrdb:color9:#222}
+green = ${xrdb:color2:#222}
+green-alt = ${xrdb:color10:#222}
+yellow = ${xrdb:color3:#222}
+yellow-alt = ${xrdb:color11:#222}
+blue = ${xrdb:color4:#222}
+blue-alt = ${xrdb:color12:#222}
+purple = ${xrdb:color5:#222}
+purple-alt = ${xrdb:color13:#222}
+aqua = ${xrdb:color6:#222}
+aqua-alt = ${xrdb:color14:#222}
+foreground = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color15:#222}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[bar/bar1]
+monitor = ${env:MONITOR:HDMI-A-0}
+width = 100%:-20
+height = 30
+offset-x = 10
+offset-y = 10
+radius = 0
+; fixed-center sets whether the middle modules of the bar are centered or not.
+fixed-center = true
+
+; To get a proper gap around polybar, this (override-redirect = true and wm-restack = i3)
+; along with the offset x and y and width 100%:-20 is necessary to make it work with i3gaps
+; and have a proper gap around the bar. It's also necessary in i3's config to set a "gaps top"
+; because otherwise the bar and i3's windows would float into each other. Basically it's
+; telling i3 to float polybar, then setting an offset for windows so they don't overlap.
+; For some reason offset-x/y don't work otherwise and float the tray instead?
+; And all of this is necessary because the normal trick to give polybar "gaps" is to set a
+; transparent border around it, but picom's drop shadows regard transparent elements of a
+; window as casting a shadow, and the shadow won't show through the transparent parts either.
+override-redirect = true
+wm-restack = i3
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00t
+
+;border-size = 4
+border--size = 0
+border-right-size = 0
+border-top-size = 0
+border-color = #00000000
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 0
+module-margin-right = 1
+
+; Main font = Fantasque Sans Mono Nerd Font
+font-0 = "Fantasque Sans Mono Nerd Font:pixelsize=11;1"
+; Font for volume bars, etc. = Unifont
+font-1 = "Unifont:fontformat=truetype:size=9:antialias=false;0"
+; Font for status modules = feather
+font-2 = "feather:pixelsize=11;0"
+; Currently unused = Sauce Code Pro Nerd Font
+font-3 = "Sauce Code Pro Nerd Font:pixelsize=18;4"
+; Font for i3 workspace icons = Iosevka Nerd Font Mono
+font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
+; Main font = Fantasque Sans Mono Nerd Font
+font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
+
+modules-left = i3
+modules-center = xwindow
+modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
+;modules-left = i3
+;modules-center = mpd
+;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+
+tray-position = right
+tray-padding = 4
+tray-background = ${colors.aqua}
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[bar/bar2]
+monitor = ${env:MONITOR:DisplayPort-5}
+width = 100%:-20
+height = 30
+offset-x = 10
+offset-y = 10
+radius = 0
+fixed-center = true
+
+override-redirect = true
+wm-restack = i3
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00t
+
+border--size = 0
+border-right-size = 0
+border-top-size = 0
+border-color = #00000000
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 0
+module-margin-right = 1
+
+; Main font = Fantasque Sans Mono Nerd Font
+font-0 = "Fantasque Sans Mono Nerd Font:pixelsize=11;1"
+; Font for volume bars, etc. = Unifont
+font-1 = "Unifont:fontformat=truetype:size=9:antialias=false;0"
+; Font for status modules = feather
+font-2 = "feather:pixelsize=11;0"
+; Currently unused = Sauce Code Pro Nerd Font
+font-3 = "Sauce Code Pro Nerd Font:pixelsize=18;4"
+; Font for i3 workspace icons = Iosevka Nerd Font Mono
+font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
+; Main font = Fantasque Sans Mono Nerd Font
+font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
+
+modules-left = i3
+modules-center = xwindow
+modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
+
+tray-position = right
+tray-padding = 4
+tray-background = ${colors.aqua}
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[bar/bar3]
+monitor = ${env:MONITOR:DisplayPort-6}
+width = 100%:-20
+height = 30
+offset-x = 10
+offset-y = 10
+radius = 0
+fixed-center = true
+
+override-redirect = true
+wm-restack = i3
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00t
+
+border--size = 0
+border-right-size = 0
+border-top-size = 0
+border-color = #00000000
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 0
+module-margin-right = 1
+
+; Main font = Fantasque Sans Mono Nerd Font
+font-0 = "Fantasque Sans Mono Nerd Font:pixelsize=11;1"
+; Font for volume bars, etc. = Unifont
+font-1 = "Unifont:fontformat=truetype:size=9:antialias=false;0"
+; Font for status modules = feather
+font-2 = "feather:pixelsize=11;0"
+; Currently unused = Sauce Code Pro Nerd Font
+font-3 = "Sauce Code Pro Nerd Font:pixelsize=18;4"
+; Font for i3 workspace icons = Iosevka Nerd Font Mono
+font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
+; Main font = Fantasque Sans Mono Nerd Font
+font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
+
+modules-left = i3
+modules-center = xwindow
+modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
+
+tray-position = right
+tray-padding = 4
+tray-background = ${colors.aqua}
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[bar/bar4]
+monitor = ${env:MONITOR:LVDS1}
+width = 100%:-20
+height = 30
+offset-x = 10
+offset-y = 10
+radius = 0
+fixed-center = true
+
+override-redirect = true
+wm-restack = i3
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00t
+
+border--size = 0
+border-right-size = 0
+border-top-size = 0
+border-color = #00000000
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 0
+module-margin-right = 1
+
+; Main font = Fantasque Sans Mono Nerd Font
+font-0 = "Fantasque Sans Mono Nerd Font:pixelsize=11;1"
+; Font for volume bars, etc. = Unifont
+font-1 = "Unifont:fontformat=truetype:size=9:antialias=false;0"
+; Font for status modules = feather
+font-2 = "feather:pixelsize=11;0"
+; Currently unused = Sauce Code Pro Nerd Font
+font-3 = "Sauce Code Pro Nerd Font:pixelsize=18;4"
+; Font for i3 workspace icons = Iosevka Nerd Font Mono
+font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
+; Main font = Fantasque Sans Mono Nerd Font
+font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
+
+modules-left = i3
+modules-center = xwindow
+modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
+
+tray-position = right
+tray-padding = 4
+tray-background = ${colors.aqua}
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/xwindow]
+type = internal/xwindow
+label = ~ %title:0:30:...% ~
+format-underline= ${colors.yellow}
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = ${colors.blue}
+
+label-layout = %layout%
+label-layout-underline = ${colors.blue}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.blue}
+label-indicator-underline = ${colors.blue}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.yellow}
+label-focused-padding = 2
+
+label-occupied = %index%
+label-occupied-padding = 2
+
+label-urgent = %index%!
+label-urgent-background = ${colors.red}
+label-urgent-padding = 2
+
+label-empty = %index%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+;format = <label-state> <label-mode>
+index-sort = false
+;index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = #fff
+label-mode-background = ${colors.yellow}
+
+; focused = Active workspace on focused monitor
+;label-focused = "●"
+label-focused = %index%
+;label-focused-font = 1
+label-focused-font = 6
+label-focused-padding = 1
+label-focused-foreground = ${colors.green}
+;label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.green}
+
+; unfocused = Inactive workspace on any monitor
+;label-unfocused = "○"
+label-unfocused = %index%
+;label-unfocused-font = 1
+label-unfocused-font = 6
+label-unfocused-padding = 1
+label-unfocused-foreground = ${colors.yellow}
+;label-unfocused-background = #ff0000
+
+; visible = Active workspace on unfocused monitor
+;label-visible = "◐"
+label-visible = %index%
+;label-visible-font = 1
+label-visible-font = 6
+label-visible-padding = 1
+;label-visible-padding = ${self.label-focused-padding}
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+
+; urgent = Workspace with urgency hint set
+;label-urgent = "◎"
+label-urgent = %index%
+;label-urgent-font = 1
+label-urgent-font = 6
+label-urgent-padding = 1
+label-urgent-foreground = ${colors.red}
+
+; Separator in between workspaces
+; label-separator = |
+
+# the value format is <name-of-i3-workspace>;<icon>
+# just replace icon1 and icon2, etc. with your preferred Unicode symbol
+;ws-icon-0 = 1;I
+;ws-icon-1 = 2;II
+;ws-icon-2 = 3;III
+;ws-icon-3 = 4;IV
+;ws-icon-4 = 5;V
+;ws-icon-5 = 6;VI
+;ws-icon-6 = 7;VII
+;ws-icon-7 = 8;VIII
+;ws-icon-8 = 9;IX
+;ws-icon-9 = 10;X
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;ﭮ
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label> <bar>
+label = BL
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #fff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+;format-prefix = " "
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.purple}
+; format-underline = #f90000
+label = %percentage:2%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.purple}
+; format-underline = #4bffdc
+label = %percentage_used%%
+
+[module/wlan]
+type = internal/network
+interface = wlan0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-underline = ${colors.purple}
+format-connected-underline = ${colors.purple}
+label-connected = %signal%%
+;label-connected = %essid%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-font = 3
+
+[module/wlp12s0f3u2]
+type = internal/network
+interface = wlp12s0f3u2
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-underline = ${colors.purple}
+format-connected-underline = ${colors.purple}
+label-connected = %signal%%
+;label-connected = %essid%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-font = 3
+
+[module/eth]
+type = internal/network
+interface = enp9s0
+interval = 3.0
+
+format-connected-underline = ${colors.purple}
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+;label-connected = "connected"
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %Y-%m-%d"
+
+time = %I:%M
+time-alt = %I:%M:%S
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.purple}
+; format-underline = #0a6cf5
+
+label = %date% %time%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume>
+format-volume-prefix = " "
+format-volume-prefix-foreground = ${colors.foreground-alt}
+format-volume-underline = ${colors.purple}
+;format-volume = <label-volume> <bar-volume>
+label-volume = %percentage%%
+# label-volume = VOL
+label-volume-foreground = ${root.foreground}
+
+label-muted = 🔇 muted
+label-muted-foreground = #666
+label-volume-font = 1
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <label-volume> <bar-volume>
+label-volume = aud %percentage%%
+# label-volume = VOL
+label-volume-foreground = ${root.foreground}
+
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ADP1
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.purple}
+; format-charging-underline = #ffb52a
+
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
+animation-discharging-0 = " "
+animation-discharging-1 = " "
+animation-discharging-2 = " "
+animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-framerate = 750
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = ${colors.purple}
+; format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.blue}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.blue}
+label-close =  cancel
+label-close-foreground = ${colors.blue}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini

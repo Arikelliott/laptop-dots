@@ -1,0 +1,13 @@
+betterdiscord-installer
+cbonsai
+eww-git
+itch-bin
+nerd-fonts-meslo
+polybar
+shantz-xwinwrap-bzr
+siji-ng
+spicetify-cli
+spotify
+ttf-unifont
+vscodium-bin
+yay
