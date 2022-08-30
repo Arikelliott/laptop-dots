@@ -1,6 +1,6 @@
 [Appearance]
-ColorScheme=konsole-miriam-theme
-Font=MesloLGS Nerd Font Mono,10,-1,5,50,0,0,0,0,0
+ColorScheme=colors-konsole
+Font=JetBrains Mono,10,-1,5,50,0,0,0,0,0
 
 [General]
 Command=/bin/zsh

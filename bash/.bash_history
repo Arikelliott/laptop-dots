@@ -1,19 +1,3 @@
-python main.py capital -s 1
-cl
-nano main.py 
-ll
-tldr ln
-cd ..
-ln -s system-generator/main.py main.py
-ll
-python main.py 
-python main.py capital
-cl
-ll
-rm stderr.log 
-ll
-rm system_gen.zip 
-rm main.py 
 ll
 cl
 mkdir ~/repos/space-pyramid-system-generator
@@ -498,3 +482,19 @@ exit
 zsh
 exit
 zsh
+sudo systemctl start sddm
+help
+exit
+less .config/i3/config 
+exit
+cat /etc/sway/config
+cp /etc/sway/config .config/sway/config
+cp /etc/sway/config .config/sway/
+sudo mkdir .config/sway
+cp /etc/sway/config .config/sway/
+sudo cp /etc/sway/config .config/sway/
+sudo systemctl restart sddm
+sudo systemctl restart sddm
+sudo systemctl start lightdm
+sudo systemctl restart lightdm
+cmatrix

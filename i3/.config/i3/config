@@ -23,7 +23,7 @@ set $mod Mod4
 
 # Launch programs at start
 exec_always --no-startup-id sh /home/arik/.config/polybar/launch.sh
-exec_always --no-startup-id sh /home/arik/dotfiles/scripts/disable-screensaver.sh
+exec_always --no-startup-id sh /home/arik/dotfiles/i3/startup-stuff.sh
 exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
 # exec --no-startup-id nitrogen --restore
 exec_always --no-startup-id pkill dunst; dunst
