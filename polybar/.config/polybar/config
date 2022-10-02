@@ -56,8 +56,11 @@ fixed-center = true
 ; And all of this is necessary because the normal trick to give polybar "gaps" is to set a
 ; transparent border around it, but picom's drop shadows regard transparent elements of a
 ; window as casting a shadow, and the shadow won't show through the transparent parts either.
-override-redirect = true
-wm-restack = i3
+
+; override-redirect = true
+; wm-restack = i3
+
+
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -90,7 +93,7 @@ font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
 ; Main font = Fantasque Sans Mono Nerd Font
 font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
 
-modules-left = i3
+modules-left = i3 bspwm
 modules-center = xwindow
 modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
 ;modules-left = i3
@@ -236,8 +239,8 @@ offset-y = 10
 radius = 0
 fixed-center = true
 
-override-redirect = true
-wm-restack = i3
+; override-redirect = true
+; wm-restack = i3
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -269,7 +272,7 @@ font-4 = "Iosevka Nerd Font Mono:pixelsize=20;5"
 ; Main font = Fantasque Sans Mono Nerd Font
 font-5 = "Fantasque Sans Mono Nerd Font:pixelsize=14;3"
 
-modules-left = i3
+modules-left = i3 bspwm
 modules-center = xwindow
 modules-right = pulseaudio wlan wlp12s0f3u2 eth battery cpu temperature date
 
@@ -317,20 +320,34 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.yellow}
-label-focused-padding = 2
+;label-focused-font = 1
+label-focused-font = 6
+label-focused-padding = 1
+label-focused-foreground = ${colors.green}
+;label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.green}
 
 label-occupied = %index%
-label-occupied-padding = 2
+;label-occupied-font = 1
+label-occupied-font = 6
+label-occupied-padding = 1
+label-occupied-foreground = ${colors.blue}
+;label-occupied-padding = ${self.label-focused-padding}
+label-occupied-background = ${self.label-focused-background}
+;label-occupied-underline = ${self.label-focused-underline}
 
 label-urgent = %index%!
-label-urgent-background = ${colors.red}
-label-urgent-padding = 2
+;label-urgent-font = 1
+label-urgent-font = 6
+label-urgent-padding = 1
+label-urgent-foreground = ${colors.red}
 
 label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+;label-empty-font = 1
+label-empty-font = 6
+label-empty-padding = 1
+label-empty-foreground = ${colors.yellow}
+;label-empty-background = #ff0000
 
 ; Separator in between workspaces
 ; label-separator = |

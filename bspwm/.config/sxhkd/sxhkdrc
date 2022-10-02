@@ -3,12 +3,13 @@
 #
 
 # terminal emulator
-super + Return
-	urxvt
+super + space
+	sh /home/arik/dotfiles/rofi/.config/rofi/launcher/run.sh
+	# rofi -modi drun,run -show drun
 
 # program launcher
-super + @space
-	dmenu_run
+# super + Return
+#	kitty
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -19,11 +20,11 @@ super + Escape
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
+super + shift + {e,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }w
+super + {_,shift + }q
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
@@ -62,9 +63,9 @@ super + {_,shift + }{h,j,k,l}
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
-# focus the next/previous window in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
+# focus the next/previous window in the current desktop - OVERRIDDEN TO FREE SHORTCUT FOR WINDOW KILLING
+# super + {_,shift + }c
+# 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -119,3 +120,10 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+
+
+# user added
+
+# volume up/down

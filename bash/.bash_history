@@ -1,12 +1,3 @@
-ll
-cl
-mkdir ~/repos/space-pyramid-system-generator
-cp system-generator/ ~/repos/space-pyramid-system-generator/
-cp -r system-generator/ ~/repos/space-pyramid-system-generator/
-cd 
-cd repos/space-pyramid-system-generator/
-ll
-cl
 git init
 git status
 ll
@@ -498,3 +489,12 @@ sudo systemctl restart sddm
 sudo systemctl start lightdm
 sudo systemctl restart lightdm
 cmatrix
+zsh
+cl
+zsh
+cl
+zsh
+systemctl status sddm
+systemctl status lightdm
+sudo systemctl restart lightdm
+nano .config/polybar/config 
