@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /usr/bin/env bash
 
 BW=3
 bspc config border_width $BW

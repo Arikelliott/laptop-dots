@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /usr/bin/env bash
 #
 # Example panel for lemonbar
 

@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/env bash
 
 sudo cp -r ./Xsession /etc/lightdm
 sudo cp -r ./keys.conf /etc/lightdm
